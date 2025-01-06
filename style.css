@@ -83,14 +83,6 @@ nav a:hover {
   transition: all;
   transition-duration: 0.2s;
 }
-span {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(80deg, #0d1926, #003771);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .profile header {
   text-align: center;
 }
@@ -128,14 +120,13 @@ span {
 }
 .jumbotron {
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   color: rgb(255, 255, 255);
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
     0px 9px 15px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(#204f81, #558ac3);
   border-radius: 10px;
-  padding: 20px;
   margin: 10px;
 }
 nav ul li:nth-of-type(1) {
@@ -214,7 +205,6 @@ a.one:hover {
   transition: all;
   transition-duration: 0.2s;
 }
-
 a.two:link,
 a.two:visited {
   color: #ffffff;
@@ -227,27 +217,29 @@ a.two:hover {
 }
 .lightbox {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.light-box h2 {
+  width: 100%;
 }
 .light-box > .column {
   padding: 0 8px;
   color: white;
 }
-
 .light-box:after {
   content: "";
   display: table;
   clear: both;
 }
-
 .column {
-  float: left;
   width: 25%;
 }
 .modal {
-  display: none;
+  display: inline-block;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
@@ -257,22 +249,22 @@ a.two:hover {
 }
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #09192a;
   margin: auto;
   padding: 0;
   width: 90%;
   max-width: 1200px;
 }
-.close {
-  color: white;
+span{
+  color: #98bbcd;
   position: absolute;
-  top: 10px;
+  top: 1px;
   right: 25px;
-  font-size: 35px;
+  font-size: 50px;
   font-weight: bold;
 }
-.close:hover,
-.close:focus {
+span:hover,
+span:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
@@ -285,16 +277,17 @@ a.two:hover {
 }
 .prev,
 .next {
+  text-shadow: 0px 5px 10px rgb(0, 0, 0);
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
+  margin-top: -80px;
   color: white;
   font-weight: bold;
   font-size: 20px;
-  transition: 0.6s ease;
+  transition: 0.2s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
@@ -338,4 +331,7 @@ img.hover-shadow {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px 0 rgba(0, 123, 255, 0.3),
     0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.modal-content .show {
+  display: flex;
 }
