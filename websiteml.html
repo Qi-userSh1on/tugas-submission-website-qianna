@@ -332,13 +332,6 @@
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
   }
-  const columns = document.querySelectorAll(".light-box .column");
-for (let i = 0; i <= columns.length; i++) {
-  columns[i].addEventListener("click", () => {
-    openModal();
-    currentSlide(i);
-  });
-}
       </script>
     </body>
   </html>
